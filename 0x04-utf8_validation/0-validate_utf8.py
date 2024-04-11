@@ -41,7 +41,7 @@ def validUTF8(data):
                     expected_continuation_bytes > 4:
                 return False
 
-        #we are expecting continuation bytes
+        # we are expecting continuation bytes
         else:
             # Check that the byte starts with a "10"
             if not (byte & UTF8_BIT_1 and not (byte & UTF8_BIT_2)):
